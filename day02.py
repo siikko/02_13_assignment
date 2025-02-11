@@ -17,9 +17,16 @@ def is_prime(num)->bool: #타입힌트
     return True
 
 help(is_prime) #함수에 대한 설명 출력
-n=int(input("input number : "))
+numbers=(input("input number : ")).split()
+n1=int(numbers[0])
+n2=int(numbers[1])
 
-if is_prime(n):
-    print(f"{n} is prime number")
-else:
-    print(f"{n} is not prime number")
+if n1>n2:
+    n1,n2=n2,n1
+
+j=n1
+while j<=n2:
+
+    if is_prime(j):
+        print(j,end=' ')
+    j+=1
