@@ -6,7 +6,7 @@ def is_prime(num)->bool: #타입힌트
     """
     if num >= 2:
         i=2
-        while i<(int(num**0.5)+1):
+        while i<(int(pow(num,0.5))+1):
 
             if num%i==0:
                 return False
